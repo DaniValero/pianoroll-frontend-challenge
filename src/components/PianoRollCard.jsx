@@ -1,14 +1,18 @@
 import React from "react";
-import PianoRoll from "./pianoroll";
+import PianoRoll from "./PianoRoll";
+import spinner from "../assets/spinner.svg"
 
 function PianoRollCard({ rollId, sequenceData }) {
   return (
     <div className="piano-roll-card">
-      <div className="description">This is a piano roll number {rollId}</div>
+      <div className="description">Piano roll number {rollId}</div>
       {sequenceData ? (
-        <PianoRoll sequence={sequenceData} />
+        <PianoRoll sequence={sequenceData} rolldId={rollId} />
       ) : (
-        <div>Loading data...</div>
+          <div className="spinner">
+            <img src={spinner} alt="loading" />
+            <p>Loading...</p>
+          </div>
       )}
     </div>
   );

@@ -1,0 +1,15 @@
+.landing-page{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+}
+
+button {
+  max-width: 10vw;
+  margin: 10px auto;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
